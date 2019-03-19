@@ -26,5 +26,6 @@ $grey: #252525;
 body {
   font-family: 'Fira Sans', sans-serif;
   color: $grey;
+  font-weight: 300;
 }
 </style>
