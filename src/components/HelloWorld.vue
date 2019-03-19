@@ -146,7 +146,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
   }
-  section:not(:first-child) {
+  section:not(:first-of-type) {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -159,6 +159,7 @@ export default {
     columns: 2;
   }
   li {
+    cursor: default;
     margin: 0 3rem;
     padding: .2rem .3rem;
     display: flex;
@@ -282,8 +283,8 @@ export default {
     100% { transform: translateX(0); opacity: 1 }
   }
   @keyframes slideDown {
-    0% { transform: translateY(-2rem); opacity: 0 }
-    100% { transform: translateY(0); opacity: 1 }
+    0% { opacity: 0; transform: translate3d(5rem, -2rem, 0) }
+    100% { opacity: 1; transform: translate3d(0, 0, 0) }
   }
   @keyframes scaleIn {
     0% { transform: scale(.2); opacity: 0 }
