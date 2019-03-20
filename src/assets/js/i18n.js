@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import messages from './traduction'
+import messages from './translations'
 
 Vue.use(VueI18n)
 
