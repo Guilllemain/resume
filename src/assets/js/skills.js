@@ -7,7 +7,7 @@ const skills =
         },
         {
           id: 2,
-          name: 'Javascript',
+          name: 'Laravel',
           rating: 5
         },
         {
@@ -32,8 +32,8 @@ const skills =
         },
         {
           id: 7,
-          name: 'Laravel',
-          rating: 5
+          name: 'Javascript',
+          rating: 4
         },
         {
           id: 8,

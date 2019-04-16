@@ -66,7 +66,8 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
-@import "./assets/scss/animations.scss";
+@import "./assets/scss/animations";
+@import "./assets/scss/utilities";
 
 $grey: #252525;
 $main-color: #00444980;

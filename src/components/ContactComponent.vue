@@ -52,6 +52,7 @@ export default {};
     margin: 3rem 0;
 
     svg {
+        color: #588386;
         fill: currentColor;
         margin-right: 0.5rem;
     }
