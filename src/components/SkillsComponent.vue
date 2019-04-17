@@ -1,7 +1,7 @@
 <template>
     <section class="section skills">
         <h3 class="section__title">{{ $t('skills') }}</h3>
-        <transition-group name="flip-list" tag="ul" class="container skills__list">
+        <transition-group name="flip-list" tag="ul" class="skills__list">
             <li v-for="skill in skills" :key="skill.id">
                 <span>{{ skill.name }}</span>
                 <span>
@@ -9,8 +9,6 @@
                         class="skills__rating"
                         v-for="rating in skill.rating"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
                         viewBox="0 0 15 15"
                     >
                         <path
@@ -23,8 +21,6 @@
                         class="skills__offrating"
                         v-for="offrating in (5 - skill.rating)"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
                         viewBox="0 0 15 15"
                     >
                         <path
@@ -77,7 +73,15 @@ export default {
     color: $grey;
     fill: currentColor;
 }
+.skills__list {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 
+    @include screen (medium) {
+        width: 100%;
+    }
+}
 ul {
     list-style: none;
     columns: 2;
@@ -86,14 +90,28 @@ li {
     cursor: default;
     margin: 0 3rem;
     padding: 0.2rem 0.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include screen (small) {
+        padding: 0 0.2rem;
+    }
+    @include flexCenter(center, space-between);
     transition: all 0.4s;
 
     &:hover {
         background-color: $grey-light;
         transform: translateY(-0.2rem);
+    }
+
+    svg {
+        height: 20px;
+        width: 20px;
+
+        @include screen (medium) {
+            width: 18px;
+        }
+        
+        @include screen (small) {
+            width: 16px;
+        }
     }
 }
 .flip-list-move {

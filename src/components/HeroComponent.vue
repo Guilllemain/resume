@@ -57,10 +57,8 @@ export default {
 }
 .hero {
     position: relative;
-    display: flex;
-    justify-content: center;
+    @include flexCenter(center, center);
     flex-direction: column;
-    align-items: center;
     height: 100vh;
     background-image: url("/codecode.jpg");
     background-image: linear-gradient(
@@ -81,7 +79,7 @@ export default {
         font-weight: 300;
         color: white;
         opacity: 0.9;
-        animation: zoomIn 1s ease-in-out backwards;
+        animation: zoomIn 1s ease-in-out;
     }
 
     &__title {
@@ -91,7 +89,7 @@ export default {
         margin-bottom: 2rem;
         color: white;
         opacity: 0.9;
-        animation: bounceInLeft 1s cubic-bezier(.215,.61,.355,1) backwards;
+        animation: bounceInLeft 1s cubic-bezier(.215,.61,.355,1);
 
         &::after {
             content: "";

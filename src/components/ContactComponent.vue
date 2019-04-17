@@ -2,13 +2,10 @@
     <section class="section">
         <h3 class="section__title">{{$t('contact.title')}}</h3>
         <p class="section__subtitle section__subtitle--light">{{$t('contact.subtitle')}}</p>
-        <div class="container">
             <div class="contact">
                 <div class="contact__email">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
                         viewBox="0 0 24 24"
                     >
                         <path fill="none" d="M0 0h24v24H0V0z"></path>
@@ -21,8 +18,6 @@
                 <div class="contact__phone">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
                         viewBox="0 0 24 24"
                     >
                         <path fill="none" d="M0 0h24v24H0V0z"></path>
@@ -34,7 +29,6 @@
                 </div>
             </div>
             <p class="contact__made">{{$t('contact.madeWith')}}</p>
-        </div>
     </section>
 </template>
 
@@ -45,9 +39,7 @@ export default {};
 <style lang="scss" scoped>
 
 .contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flexCenter(center, center);
     margin-top: 3rem;
     margin-bottom: 6rem;
 
@@ -55,11 +47,23 @@ export default {};
         color: $main-color;
         fill: currentColor;
         margin-right: 0.5rem;
+        width: 24px;
+        height: 24px;
+
+        @include screen (medium) {
+            width: 21px;
+            height: 21px;
+        }
+
+        @include screen (small) {
+            width: 18px;
+            height: 18px;
+        }
     }
     
     &__email, &__phone {
-        display: flex;
-        align-items: center;
+        @include flexCenter(center);
+        padding: 0 6rem;
     }
 
     &__email {

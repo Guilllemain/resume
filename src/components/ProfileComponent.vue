@@ -1,7 +1,7 @@
 <template>
     <section id="profile" class="section">
         <h3 class="section__title">{{ $t('profile.title') }}</h3>
-        <div class="container profile__description">
+        <div class="profile__description">
             <figure class="profile__picture" :class="{animated: showPicture}">
                 <img src="profile.jpg" alt="Yann Guillemain">
             </figure>
@@ -24,8 +24,14 @@ export default {
 <style lang="scss" scoped>
 .profile {
     &__description {
-        display: flex;
-        align-items: center;
+        @include flexCenter(center);
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include screen (medium) {
+            width: 100%;
+        }
 
         & .profile__picture {
             flex: 0 0 25%;

@@ -74,6 +74,10 @@ export default {
     padding-top: 3rem;
     padding-bottom: 5rem;
 
+    @include screen(medium) {
+        padding: 3rem 3rem 5rem 3rem;
+    }
+
     &:last-child {
         padding-bottom: 1rem;
     }
@@ -131,7 +135,7 @@ export default {
     right: 2rem;
     color: white;
     display: flex;
-    animation: slideDown 1.4s ease-in-out backwards;
+    animation: slideDown 1.4s ease-in-out;
 
     .lang-selected {
         font-weight: 400;
@@ -169,9 +173,4 @@ export default {
     }
 }
 
-.container {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
 </style>

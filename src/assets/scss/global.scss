@@ -1,16 +1,7 @@
-@import "./_animations";
 @import './_variables';
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
+@import './_mixins';
+@import './_base';
+@import './_animations';
 
 .task-link {
     color: $grey-darkest;
@@ -19,24 +10,4 @@
     &:hover {
         color: white;
     }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Fira Sans", sans-serif;
-    color: $grey-darkest;
-    font-weight: 300;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    line-height: 1.5rem;
-    font-weight: 300;
 }
