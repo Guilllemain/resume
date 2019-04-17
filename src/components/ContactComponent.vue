@@ -16,7 +16,7 @@
                             d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
                         ></path>
                     </svg>
-                    <a href="mailto:johndoe@gmail.com" title="johndoe@gmail.com">johndoe@gmail.com</a>
+                    <a href="mailto:devguillemain@gmail.com">devguillemain@gmail.com</a>
                 </div>
                 <div class="contact__phone">
                     <svg
@@ -48,35 +48,27 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: #252525;
-    margin: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
 
     svg {
-        color: #588386;
+        color: $main-color;
         fill: currentColor;
         margin-right: 0.5rem;
     }
     
     &__email, &__phone {
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
     }
 
     &__email {
         a {
             color: currentColor;
-
-            &::after {
-                display: block;
-                content: attr(title);
-                font-weight: 400;
-                height: 0;
-                overflow: hidden;
-                visibility: hidden;
-            }
+            transition: all .2s ease-in-out;
 
             &:hover {
-                font-weight: 400;
+                transform: translateY(-.1rem) scale(1.01);
             }
         }
     }
@@ -86,4 +78,5 @@ export default {};
         font-size: .9rem;
     }
 }
+
 </style>

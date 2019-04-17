@@ -70,11 +70,11 @@ export default {
 
 <style lang="scss" scoped>
 .skills__rating {
-    color: #ffc624;
+    color: $yellow;
     fill: currentColor;
 }
 .skills__offrating {
-    color: #cecece;
+    color: $grey;
     fill: currentColor;
 }
 
@@ -92,7 +92,7 @@ li {
     transition: all 0.4s;
 
     &:hover {
-        background-color: #ebebeb;
+        background-color: $grey-light;
         transform: translateY(-0.2rem);
     }
 }

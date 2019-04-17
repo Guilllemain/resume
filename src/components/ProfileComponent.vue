@@ -1,16 +1,11 @@
 <template>
     <section id="profile" class="section">
-        <h3 class="section__title">{{ $t('profile') }}</h3>
+        <h3 class="section__title">{{ $t('profile.title') }}</h3>
         <div class="container profile__description">
             <figure class="profile__picture" :class="{animated: showPicture}">
                 <img src="profile.jpg" alt="Yann Guillemain">
             </figure>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ut, exercitationem reiciendis velit asperiores et obcaecati.
-                Ab modi veniam, laudantium consectetur totam quae illo. Quam suscipit explicabo corrupti officia cum!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ut, exercitationem reiciendis velit asperiores et obcaecati.
-                Ab modi veniam, laudantium consectetur totam quae illo. Quam suscipit explicabo corrupti officia cum!
-            </p>
+            <p v-html="$t('profile.description')"></p>
         </div>
     </section>
 </template>

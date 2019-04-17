@@ -65,38 +65,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700");
-@import "./assets/scss/animations";
-@import "./assets/scss/utilities";
-
-$grey: #252525;
-$main-color: #00444980;
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Fira Sans", sans-serif;
-    color: $grey;
-    font-weight: 300;
-    overflow-x: hidden;
-}
 
 #app {
     position: relative;
@@ -112,6 +80,8 @@ body {
 
     &--dark {
         background-color: $main-color;
+        color: white;
+        opacity: .9;
     }
 
     &__title {
@@ -203,9 +173,5 @@ body {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-}
-p {
-    line-height: 1.5rem;
-    font-weight: 300;
 }
 </style>

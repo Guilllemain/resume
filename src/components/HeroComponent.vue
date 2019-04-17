@@ -44,10 +44,7 @@ export default {
     height: auto;
 }
 .scroll {
-    animation-name: scroll;
-    animation-duration: 1.5s;
-    animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
-    animation-iteration-count: infinite;
+    animation: scroll 1.5s cubic-bezier(0.65, -0.55, 0.25, 1.5) infinite;
     transform-origin: 50% 20.5px;
     will-change: transform, opacity;
 }
@@ -68,8 +65,8 @@ export default {
     background-image: url("/codecode.jpg");
     background-image: linear-gradient(
             to right bottom,
-            rgba(0, 68, 73, 0.5),
-            rgba(0, 68, 73, 0.5)
+            rgba(0, 68, 73, 0.6),
+            rgba(0, 68, 73, 0.6)
         ),
         url("/codecode.jpg");
     background-size: cover;
@@ -84,8 +81,7 @@ export default {
         font-weight: 300;
         color: white;
         opacity: 0.9;
-        animation: slideRight 1s ease-in backwards;
-        animation-delay: 0.2s;
+        animation: zoomIn 1s ease-in-out backwards;
     }
 
     &__title {
@@ -95,7 +91,7 @@ export default {
         margin-bottom: 2rem;
         color: white;
         opacity: 0.9;
-        animation: slideLeft 1s ease-in backwards;
+        animation: bounceInLeft 1s cubic-bezier(.215,.61,.355,1) backwards;
 
         &::after {
             content: "";
@@ -105,7 +101,7 @@ export default {
             width: 70%;
             height: 1px;
             margin-top: 1rem;
-            animation: appears 1s ease-in-out 0.6s backwards;
+            animation: appears 1s ease-in-out 1s backwards;
         }
     }
 }
