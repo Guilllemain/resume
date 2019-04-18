@@ -3,7 +3,7 @@
         <h3 class="section__title section__title--light">{{$t('experiences.title')}}</h3>
         <div class="experiences">
             <div class="experiences__item">
-                <div>
+                <div class="item__header">
                     <h3>{{$t('experiences.job1.title')}}</h3>
                     <h4>{{$t('experiences.job1.employer')}}</h4>
                     <span>{{$t('experiences.job1.year')}}</span>
@@ -21,7 +21,7 @@
                 </ul>
             </div>
             <div class="experiences__item">
-                <div>
+                <div class="item__header">
                     <h3>{{$t('experiences.job2.title')}}</h3>
                     <h4>{{$t('experiences.job2.employer')}}</h4>
                     <span>{{$t('experiences.job2.year')}}</span>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
             <div class="experiences__item">
-                <div>
+                <div class="item__header">
                     <h3>{{$t('experiences.job3.title')}}</h3>
                     <h4>{{$t('experiences.job3.employer')}}</h4>
                     <span>{{$t('experiences.job3.year')}}</span>
@@ -60,17 +60,12 @@
     </section>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss" scoped>
-
 .experiences {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 3rem;
-    width: 1000px;
+    width: $container-width;
     margin-left: auto;
     margin-right: auto;
 
@@ -87,27 +82,40 @@ export default {};
         @include screen (xs) {
             display: flex;
         }
+
+        .item__header {
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 70%;
+                background-color: $grey-darkest;
+                margin-top: .7rem;
+                opacity: .3;
+            }
+        }
     }
 
-    & h3 {
+    h3 {
         color: $grey-darkest;
         font-weight: 500;
         margin-bottom: .5rem;
         font-size: 1.3rem;
+        opacity: .7;
     }
     
-    & h4 {
+    h4 {
         color: $grey-darkest;
         font-weight: 400;
         font-size: 1.1rem;
     }
 
-    & span {
+    span {
         color: $grey-darkest;
         font-size: .95rem;
     }
 
-    & ul {
+    ul {
         margin-top: 1.5rem;
         list-style: none;
 

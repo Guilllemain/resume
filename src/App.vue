@@ -1,9 +1,5 @@
 <template>
     <div id="app">
-        <div class="languages">
-            <a @click="changeLocale('fr')" :class="{ 'lang-selected': lang === 'fr' }">fr</a>
-            <a @click="changeLocale('en')" :class="{ 'lang-selected': lang === 'en' }">en</a>
-        </div>
         <hero-component :isScrolling="isScrolling"></hero-component>
         <profile-component :showPicture="showPicture"></profile-component>
         <experiences-component></experiences-component>
@@ -20,7 +16,6 @@ import ExperiencesComponent from "./components/ExperiencesComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import ProjectsComponent from "./components/ProjectsComponent";
 import ContactComponent from "./components/ContactComponent";
-import i18n from "./assets/js/i18n";
 
 export default {
     name: "app",
@@ -39,20 +34,24 @@ export default {
             showPicture: false
         };
     },
-    computed: {
-        lang() {
-            return i18n.locale;
-        }
-    },
     methods: {
-        changeLocale(locale) {
-            i18n.locale = locale;
-        },
         handleScroll() {
             if (window.scrollY <= 30) this.isScrolling = false;
             if (window.scrollY >= 50) this.isScrolling = true;
-            if (window.scrollY >= 320) this.showPicture = true;
-            if (window.scrollY >= 1380) this.orderedSkills = true;
+            if (window.scrollY >= 320 && window.screen.width > 1024) {
+                this.showPicture = true;
+            } else if (window.scrollY >= 260 && window.screen.width <= 1024) {
+                this.showPicture = true;
+            } else if (window.scrollY >= 200 && window.screen.width <= 800) {
+                this.showPicture = true;
+            }
+            if (window.scrollY >= 1310 && window.screen.width > 1024) {
+                this.orderedSkills = true;
+            } else if (window.scrollY >= 1070 && window.screen.width <= 1024) {
+                this.orderedSkills = true;
+            } else if (window.scrollY >= 900 && window.screen.width <= 800) {
+                this.orderedSkills = true;
+            }
         }
     },
     created() {
@@ -128,49 +127,6 @@ export default {
     }
 }
 
-.languages {
-    position: absolute;
-    z-index: 10;
-    top: 1.5rem;
-    right: 2rem;
-    color: white;
-    display: flex;
-    animation: slideDown 1.4s ease-in-out;
 
-    .lang-selected {
-        font-weight: 400;
-        opacity: 1;
-
-        &::after {
-            font-weight: 300;
-            opacity: 0.7;
-        }
-    }
-
-    & a {
-        opacity: 0.7;
-        cursor: pointer;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:first-child {
-            margin-right: 1rem;
-
-            &::after {
-                content: "";
-                display: block;
-                background-color: white;
-                height: 60%;
-                width: 1px;
-                margin-left: 1rem;
-            }
-        }
-    }
-}
 
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <section class="section skills">
+    <section class="section">
         <h3 class="section__title">{{ $t('skills') }}</h3>
-        <transition-group name="flip-list" tag="ul" class="skills__list">
+        <transition-group name="flip-list" tag="ul" class="skills">
             <li v-for="skill in skills" :key="skill.id">
                 <span>{{ skill.name }}</span>
                 <span>
@@ -51,7 +51,7 @@ export default {
     },
     computed: {
         orderedSkills() {
-            return this.skills.slice().sort((a, b) => b.rating - a.rating);
+            return [...this.skills].sort((a, b) => b.rating - a.rating);
         }
     },
     watch: {
@@ -65,55 +65,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skills__rating {
-    color: $yellow;
-    fill: currentColor;
-}
-.skills__offrating {
-    color: $grey;
-    fill: currentColor;
-}
-.skills__list {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+.skills {
+    width: $container-width;
+    margin: 0 auto;
 
     @include screen (medium) {
         width: 100%;
     }
+
+    &__offrating {
+        color: $grey;
+        fill: currentColor;
+    }
+
+    &__rating {
+        color: $yellow;
+        fill: currentColor;
+    }
 }
+
 ul {
     list-style: none;
     columns: 2;
-}
-li {
-    cursor: default;
-    margin: 0 3rem;
-    padding: 0.2rem 0.3rem;
-    @include screen (small) {
-        padding: 0 0.2rem;
-    }
-    @include flexCenter(center, space-between);
-    transition: all 0.4s;
 
-    &:hover {
-        background-color: $grey-light;
-        transform: translateY(-0.2rem);
-    }
-
-    svg {
-        height: 20px;
-        width: 20px;
-
-        @include screen (medium) {
-            width: 18px;
-        }
-        
+    li {
+        cursor: default;
+        margin: 0 3rem;
+        padding: 0.2rem 0.3rem;
         @include screen (small) {
-            width: 16px;
+            padding: 0 0.2rem;
+        }
+        @include flexCenter(center, space-between);
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: $grey-light;
+            transform: translateY(-0.2rem);
+        }
+
+        svg {
+            height: 20px;
+            width: 20px;
+
+            @include screen (medium) {
+                width: 18px;
+            }
+            
+            @include screen (small) {
+                width: 16px;
+            }
         }
     }
 }
+
 .flip-list-move {
     transition: transform 1s;
 }

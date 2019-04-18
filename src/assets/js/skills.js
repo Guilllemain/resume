@@ -13,7 +13,7 @@ const skills =
         {
           id: 3,
           name: 'Command Line',
-          rating: 4
+          rating: 3
         },
         {
           id: 4,
@@ -48,7 +48,7 @@ const skills =
         {
           id: 10,
           name: 'NodeJS',
-          rating: 4
+          rating: 3
         },
         {
           id: 11,

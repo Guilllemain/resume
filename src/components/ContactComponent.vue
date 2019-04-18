@@ -28,16 +28,11 @@
                     <span>06 07 08 09 10</span>
                 </div>
             </div>
-            <p class="contact__made">{{$t('contact.madeWith')}}</p>
+            <p class="made-with">{{$t('contact.madeWith')}}</p>
     </section>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss" scoped>
-
 .contact {
     @include flexCenter(center, center);
     margin-top: 3rem;
@@ -71,16 +66,27 @@ export default {};
             color: currentColor;
             transition: all .2s ease-in-out;
 
-            &:hover {
-                transform: translateY(-.1rem) scale(1.01);
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 0%;
+                margin-top: .2rem;
+                background-color: $grey-darkest;
+                transition: width .3s ease-out;
             }
+            
+            &:hover::after {
+                width: 100%;
+            }
+
         }
     }
+}
 
-    &__made {
-        text-align: center;
-        font-size: .9rem;
-    }
+.made-with {
+    text-align: center;
+    font-size: .8rem;
 }
 
 </style>

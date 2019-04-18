@@ -25,7 +25,7 @@ export default {
 .profile {
     &__description {
         @include flexCenter(center);
-        width: 1000px;
+        width: $container-width;
         margin-left: auto;
         margin-right: auto;
 
@@ -33,11 +33,15 @@ export default {
             width: 100%;
         }
 
-        & .profile__picture {
+        .profile__picture {
             flex: 0 0 25%;
             clip-path: circle(45% at 50% 50%);
             margin-right: 3rem;
             opacity: 0;
+
+            @include screen (medium) {
+                flex: 0 0 20%;
+            }
 
             & img {
                 transition: all 0.4s;

@@ -9,7 +9,43 @@ const messages = {
                 Ab modi veniam, laudantium consectetur totam quae illo. Quam suscipit explicabo corrupti officia cum!`
         },
         experiences: {
-            title: 'Experiences'
+            title: 'Experiences',
+            job1: {
+                title: 'Webmaster',
+                year: 'Since 2015',
+                employer: 'French Tennis Federation',
+                tasks: [
+                    'In charge of the website <a class="task-link" href="http://www.lacentraleduclub.fft.fr/centralecat/">la Centrale du club</a>',
+                    'Cropping products images',
+                    'Put forward promotions and new products',
+                    'Selecting and testing new features',
+                    'Sales report and web analytics'
+                ]
+            },
+            job2: {
+                title: 'Assistant de communication',
+                year: 'From 2013 to 2015',
+                employer: 'French Tennis Federation',
+                tasks: [
+                    `Creation of the product catalog`,
+                    'Designing graphic mock-up',
+                    'Réalisation de supports de communication',
+                    `Rédaction de fiche produit`
+                ]
+            },
+            job3: {
+                title: 'Chargé ADV',
+                year: 'From 2009 to 2013',
+                employer: 'French Tennis Federation',
+                tasks: [
+                    'En charge de la logistique des opérations fédérales',
+                    'Conseil aux clubs',
+                    'Préparation et suivi des commandes',
+                    'Facturation des fournisseurs',
+                    'Gestion des contrats fournisseurs',
+                    'Gestion des stocks'
+                ]
+            }
         },
         skills: 'Skills',
         projects: {
@@ -55,7 +91,7 @@ const messages = {
                 `
         },
         experiences: {
-            title: 'Éxperiences',
+            title: 'Expériences',
             job1: {
                 title: 'Webmaster',
                 year: 'Depuis 2015',
@@ -65,17 +101,19 @@ const messages = {
                     'Détourage des visuels produits',
                     'Mise en avant des promotions et nouveautés',
                     'Sélection et recette des évolutions',
-                    'Statistiques de ventes'
+                    'Statistiques de ventes et web analytics'
                 ]
             },
             job2: {
-                title: 'Graphiste',
+                title: 'Chargé ADV',
                 year: 'De 2012 à 2015',
                 employer: 'Fédération Française de Tennis',
                 tasks: [
-                    `Réalisation d'un catalogue produit`,
-                    'Création de maquettes',
-                    'Réalisation de newsletters',
+                    'Réalisation du catalogue produits',
+                    'Réalisation de supports de communication',
+                    'Rédaction des fiches produits',
+                    'Validation et suivi des commandes',
+                    'Gestion des stocks'
                 ]
             },
             job3: {
@@ -83,11 +121,11 @@ const messages = {
                 year: 'De 2009 à 2012',
                 employer: 'Fédération Française de Tennis',
                 tasks: [
-                    'En charge de la logistique des opérations fédérales',
                     'Conseil aux clubs',
-                    'Préparation et suivi des commandes',
+                    'Préparation des commandes',
                     'Facturation des fournisseurs',
-                    'Gestion des contrats fournisseurs'
+                    'Gestion logistique des opérations fédérales',
+                    'Gestion des contrats fournisseurs',
                 ]
             }
         },
