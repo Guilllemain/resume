@@ -79,13 +79,28 @@ export default {
     flex-direction: column;
     color: white;
     height: 100vh;
-    background-image: url("/codecode.jpg");
+    background-image: url("/codecode-1x.jpg");
     background-image: linear-gradient(
             to right bottom,
             rgba(0, 68, 73, 0.6),
             rgba(0, 68, 73, 0.6)
         ),
-        url("/codecode.jpg");
+        url("/codecode-1x.jpg");
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 1.25),
+        only screen and ( min--moz-device-pixel-ratio: 1.25),
+        only screen and ( -o-min-device-pixel-ratio: 1.25/1),
+        only screen and ( min-device-pixel-ratio: 1.25),
+        only screen and ( min-resolution: 200dpi),
+        only screen and ( min-resolution: 1.25dppx)
+    {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 68, 73, 0.6),
+            rgba(0, 68, 73, 0.6)
+        ),
+        url("/codecode-2x.jpg");
+    }
     background-size: cover;
     background-attachment: fixed;
 

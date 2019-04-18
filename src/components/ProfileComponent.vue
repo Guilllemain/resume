@@ -3,7 +3,7 @@
         <h3 class="section__title">{{ $t('profile.title') }}</h3>
         <div class="profile__description">
             <figure class="profile__picture" :class="{animated: showPicture}">
-                <img src="profile.jpg" alt="Yann Guillemain">
+                <img src="profile-1x.jpg" srcset="profile-1x.jpg 1x, profile-2x.jpg 2x" alt="Yann Guillemain">
             </figure>
             <p v-html="$t('profile.description')"></p>
         </div>

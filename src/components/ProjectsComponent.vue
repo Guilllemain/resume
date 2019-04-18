@@ -178,12 +178,12 @@
     }
 }
 .projects {
-    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4.5rem;
     width: $container-width;
     margin: 0 auto;
+    margin-top: 3rem;
 
     @include screen (medium) {
         width: 100%;
