@@ -86,14 +86,7 @@ export default {
             rgba(0, 68, 73, 0.6)
         ),
         url("/codecode-1x.jpg");
-    @media
-        only screen and (-webkit-min-device-pixel-ratio: 1.25),
-        only screen and ( min--moz-device-pixel-ratio: 1.25),
-        only screen and ( -o-min-device-pixel-ratio: 1.25/1),
-        only screen and ( min-device-pixel-ratio: 1.25),
-        only screen and ( min-resolution: 200dpi),
-        only screen and ( min-resolution: 1.25dppx)
-    {
+    @include screen(hd) {
         background-image: linear-gradient(
             to right bottom,
             rgba(0, 68, 73, 0.6),
@@ -156,7 +149,7 @@ export default {
     &__subtitle {
         font-size: 1.5rem;
         font-weight: 300;
-        opacity: 0.9;
+        opacity: 0.95;
         animation: zoomIn 1s ease-in-out .5s backwards;
     }
 
@@ -165,7 +158,7 @@ export default {
         font-size: 4rem;
         letter-spacing: 0.1rem;
         margin-bottom: 2rem;
-        opacity: 0.9;
+        opacity: 0.95;
         animation: bounceInLeft 1s cubic-bezier(.215,.61,.355,1);
 
         &::after {

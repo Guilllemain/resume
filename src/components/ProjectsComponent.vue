@@ -5,7 +5,7 @@
         <div class="projects">
             <div class="card">
                 <div class="card__side card__side--front">
-                    <img src="mazlo.jpg" alt="mazlo-project">
+                    <img src="mazlo.jpg" srcset="mazlo-1x.jpg 1x, mazlo-2x.jpg 2x" alt="mazlo-project">
                 </div>
                 <div class="card__side card__side--back">
                     <h4 class="card__title">{{$t('projects.card.card1.title')}}</h4>
@@ -15,7 +15,7 @@
             </div>
             <div class="card">
                 <div class="card__side card__side--front">
-                    <img src="natours.jpg" alt="natours-project">
+                    <img src="natours.jpg" srcset="natours-1x.jpg 1x, natours-2x.jpg 2x" alt="natours-project">
                 </div>
                 <div class="card__side card__side--back">
                     <h4 class="card__title">{{$t('projects.card.card2.title')}}</h4>
@@ -25,7 +25,7 @@
             </div>
             <div class="card">
                 <div class="card__side card__side--front">
-                    <img src="battleship.jpg" alt="hotel-booking-project">
+                    <img src="battleship.jpg" srcset="battleship-1x.jpg 1x, battleship-2x.jpg 2x" alt="hotel-booking-project">
                 </div>
                 <div class="card__side card__side--back">
                     <h4 class="card__title">{{$t('projects.card.card3.title')}}</h4>
@@ -35,7 +35,7 @@
             </div>
             <div class="card">
                 <div class="card__side card__side--front">
-                    <img src="nexter.jpg" alt="nexter-project">
+                    <img src="nexter.jpg" srcset="nexter-1x.jpg 1x, nexter-2x.jpg 2x" alt="nexter-project">
                 </div>
                 <div class="card__side card__side--back">
                     <h4 class="card__title">{{$t('projects.card.card4.title')}}</h4>
@@ -121,7 +121,6 @@
 		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
 		transition: all .8s ease;
 		backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
 
         &--back {
             background-color: white;

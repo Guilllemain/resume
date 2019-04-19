@@ -119,7 +119,7 @@ ul {
 }
 
 .flip-list-move {
-    transition: transform 1s;
+    transition: transform 1.3s;
 }
 </style>
 

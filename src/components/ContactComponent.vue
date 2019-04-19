@@ -63,6 +63,7 @@
 
     &__email {
         a {
+            margin-top: .2rem;
             color: currentColor;
             transition: all .2s ease-in-out;
 

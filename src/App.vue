@@ -46,11 +46,17 @@ export default {
                 this.showPicture = true;
             }
             if (window.scrollY >= 1310 && window.screen.width > 1024) {
-                this.orderedSkills = true;
+                setTimeout(() => {
+                    this.orderedSkills = true;
+                }, 1500); 
             } else if (window.scrollY >= 1070 && window.screen.width <= 1024) {
-                this.orderedSkills = true;
+                setTimeout(() => {
+                    this.orderedSkills = true;
+                }, 1500); 
             } else if (window.scrollY >= 900 && window.screen.width <= 800) {
-                this.orderedSkills = true;
+                setTimeout(() => {
+                    this.orderedSkills = true;
+                }, 1500); 
             }
         }
     },
@@ -114,6 +120,7 @@ export default {
             height: 1px;
             width: 25%;
             margin: auto;
+            margin-top: -1rem;
             margin-bottom: 1rem;
         }
 
