@@ -5,6 +5,9 @@
 }
 
 @mixin screen($breakpoint) {
+	@if $breakpoint == mobile {
+		@media only screen and (max-width: 36.9em) { @content }; //590px
+	}
 	@if $breakpoint == xs {
 		@media only screen and (max-width: 40.6em) { @content }; //650px
 	}

@@ -88,6 +88,10 @@ ul {
     list-style: none;
     columns: 2;
 
+    @include screen (mobile) {
+        columns: 1;
+    }
+
     li {
         cursor: default;
         margin: 0 3rem;

@@ -19,6 +19,10 @@ html {
     @include screen(small) {
         font-size: 70%;
     }
+
+    @include screen(mobile) {
+        font-size: 60%;
+    }
 }
 
 body {

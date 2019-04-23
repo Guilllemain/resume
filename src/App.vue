@@ -38,25 +38,21 @@ export default {
         handleScroll() {
             if (window.scrollY <= 30) this.isScrolling = false;
             if (window.scrollY >= 50) this.isScrolling = true;
-            if (window.scrollY >= 320 && window.screen.width > 1024) {
-                this.showPicture = true;
-            } else if (window.scrollY >= 260 && window.screen.width <= 1024) {
-                this.showPicture = true;
-            } else if (window.scrollY >= 200 && window.screen.width <= 800) {
+            if (
+                (window.scrollY >= 320 && window.screen.width > 1024) ||
+                (window.scrollY >= 260 && window.screen.width <= 1024) ||
+                (window.scrollY >= 200 && window.screen.width <= 800)
+                ) {
                 this.showPicture = true;
             }
-            if (window.scrollY >= 1310 && window.screen.width > 1024) {
+            if (
+                (window.scrollY >= 1310 && window.screen.width > 1024) ||
+                (window.scrollY >= 1070 && window.screen.width <= 1024) ||
+                (window.scrollY >= 900 && window.screen.width <= 800)
+                ) {
                 setTimeout(() => {
                     this.orderedSkills = true;
-                }, 1500); 
-            } else if (window.scrollY >= 1070 && window.screen.width <= 1024) {
-                setTimeout(() => {
-                    this.orderedSkills = true;
-                }, 1500); 
-            } else if (window.scrollY >= 900 && window.screen.width <= 800) {
-                setTimeout(() => {
-                    this.orderedSkills = true;
-                }, 1500); 
+                }, 700); 
             }
         }
     },

@@ -59,7 +59,7 @@ const messages = {
                 cta: 'See the website',
                 card1: {
                     title: 'Karl Mazlo',
-                    description: `Jewelery website built using Laravel with a homemade CMS`,
+                    description: `Jewelery website with a homemade CMS built in PHP using Laravel`,
                 },
                 card2: {
                     title: 'Natours',
@@ -141,7 +141,7 @@ const messages = {
                 cta: 'Voir le site',
                 card1: {
                     title: 'Karl Mazlo',
-                    description: 'Site de joaillerie et CMS personnalisé construit avec Laravel',
+                    description: 'Site de joaillerie avec CMS personnalisé construit en PHP avec Laravel',
                 },
                 card2: {
                     title: 'Natours',

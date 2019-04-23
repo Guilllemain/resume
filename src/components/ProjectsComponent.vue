@@ -104,6 +104,10 @@
         height: 23.5vw;
     }
 
+    @include screen (mobile) {
+        height: 36.5vw;
+    }
+
     &__title {
         text-transform: uppercase;
         letter-spacing: .1rem;
@@ -147,6 +151,10 @@
         transform: rotateY(0);
     }
 
+    &__description {
+        line-height: 1.5rem;
+    }
+
     &__cta {
         outline: none;
         border: none;
@@ -186,6 +194,12 @@
 
     @include screen (medium) {
         width: 100%;
+    }
+
+    @include screen(mobile) {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        margin-top: 0;
     }
 }
 </style>
