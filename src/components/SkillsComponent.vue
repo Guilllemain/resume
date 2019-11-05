@@ -16,7 +16,6 @@
                         ></path>
                         <path fill="none" d="M0 0h18v18H0z"></path>
                     </svg>
-                    <!-- eslint-disable-next-line -->
                     <svg
                         class="skills__offrating"
                         v-for="offrating in (5 - skill.rating)"
